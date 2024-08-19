@@ -47,6 +47,27 @@ use OpenAPI\Attributes as OA;
  *     @OA\Property(property="email", type="string", example="john@example.com"),
  *     @OA\Property(property="password", type="string", example="password123"),
  * )
+ * @OA\Schema(
+ *     schema="Category",
+ *     required={"id", "name", "description"},
+ *     @OA\Property(property="id", type="integer", example=1),
+ *     @OA\Property(property="name", type="string", example="Electronics"),
+ *     @OA\Property(property="description", type="string", example="Category for electronic products"),
+ * )
+ * 
+ * @OA\Schema(
+ *     schema="Brand",
+ *     required={"id", "name", "description", "logo", "website", "email"},
+ *     @OA\Property(property="id", type="integer", example=1),
+ *     @OA\Property(property="name", type="string", example="Apple"),
+ *     @OA\Property(property="description", type="string", example="Innovative technology company"),
+ *     @OA\Property(property="logo", type="string", example="https://example.com/apple-logo.png"),
+ *     @OA\Property(property="website", type="string", example="https://www.apple.com"),
+ *     @OA\Property(property="email", type="string", example="info@apple.com"),
+ * )
+ * 
+ * 
+ * 
  */
 class ProductControllerAPI extends Controller
 {
